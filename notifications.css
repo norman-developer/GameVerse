@@ -1,0 +1,121 @@
+/* Шапка страницы */
+.timeline-hero {
+  background: linear-gradient(120deg, #4d1c2d, #20252b);
+  padding: 42px;
+  border-radius: 20px;
+  margin-bottom: 28px;
+}
+.eyebrow {
+  color: #ff879a;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+.timeline-hero h1 {
+  font:
+    700 clamp(23px, 3vw, 36px) Unbounded,
+    sans-serif;
+  margin: 16px 0;
+}
+.timeline-hero p {
+  color: #c9cdd3;
+}
+.timeline-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.timeline-head h2 {
+  font-size: 20px;
+}
+.timeline-head span {
+  color: #b8bdc5;
+  font-size: 13px;
+}
+/* Лента событий */
+.timeline {
+  max-width: 850px;
+  margin: 15px 0 60px 10px;
+}
+.timeline-date {
+  font-size: 14px;
+  color: #ff6c83;
+  margin: 26px 0 18px 52px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.timeline-item {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 18px;
+  position: relative;
+  padding-bottom: 22px;
+}
+.timeline-item:before {
+  content: "";
+  position: absolute;
+  top: 42px;
+  bottom: -3px;
+  left: 19px;
+  width: 2px;
+  background: #683243;
+}
+.timeline-item:last-child:before {
+  display: none;
+}
+.timeline-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #c41e3a;
+  display: grid;
+  place-items: center;
+  position: relative;
+  z-index: 1;
+}
+.timeline-card {
+  background: #20252b;
+  border: 1px solid #353a41;
+  border-radius: 14px;
+  padding: 22px;
+  transition:
+    transform 0.2s,
+    border-color 0.2s;
+}
+.timeline-card:hover {
+  transform: translateY(-3px);
+  border-color: #c41e3a;
+}
+.timeline-card time {
+  color: #ff8297;
+  font-size: 12px;
+}
+.timeline-card h3 {
+  margin: 8px 0;
+  font-size: 17px;
+}
+.timeline-card p {
+  color: #b8bdc5;
+  margin: 0;
+  line-height: 1.6;
+}
+.timeline-new {
+  display: inline-block;
+  margin-top: 12px;
+  color: #ff8da0;
+  font-size: 12px;
+}
+@media (max-width: 600px) {
+  .timeline-hero {
+    padding: 24px;
+  }
+  .timeline-card {
+    padding: 15px;
+  }
+  .timeline-card h3 {
+    font-size: 15px;
+  }
+  .timeline-item {
+    gap: 10px;
+  }
+}

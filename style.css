@@ -1,0 +1,186 @@
+main {
+  flex: 1;
+  min-width: 0;
+  padding: 30px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.search {
+  width: 380px;
+  max-width: 100%;
+  margin-left: 2px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+}
+
+.search input {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(180deg, #292d38, #1b1f27);
+  border: none;
+  border-radius: 12px;
+  color: white;
+}
+
+.search input:focus {
+  outline: 2px solid #555;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon-header {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(180deg, #292d38, #1b1f27);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-size: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.icon-header:hover {
+  background: #c41e3a;
+}
+
+.button-categorie {
+  margin-top: 30px;
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.button-categorie label {
+  flex: 1;
+  padding: 15px;
+  background: linear-gradient(180deg, #292d38, #1b1f27);
+  color: white;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+.button-categorie label:hover {
+  background: #c41e3a;
+}
+
+input[name="category"] {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.button-categorie {
+  display: flex;
+  gap: 12px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.button-categorie label {
+  flex: 1;
+  min-width: 120px;
+  padding: 15px;
+  background: #20252b;
+  color: white;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button-categorie label:hover {
+  background: #c41e3a;
+}
+
+#free:checked ~ .button-categorie label[for="free"],
+#adventure:checked ~ .button-categorie label[for="adventure"],
+#popular:checked ~ .button-categorie label[for="popular"],
+#friends:checked ~ .button-categorie label[for="friends"],
+#singleplayer:checked ~ .button-categorie label[for="singleplayer"],
+#action:checked ~ .button-categorie label[for="action"] {
+  background: #c41e3a;
+}
+
+.games {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.game-card {
+  display: none;
+  min-width: 0;
+  background: #20252b;
+  padding: 15px;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+}
+
+.game-card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.game-card h3 {
+  font-family: "Unbounded", sans-serif;
+  font-size: 18px;
+  margin: 15px 0 10px;
+}
+
+.game-card .description {
+  color: #b8bdc5;
+  font-size: 14px;
+  line-height: 1.6;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Переключение категорий */
+#free:checked ~ .games .free,
+#adventure:checked ~ .games .adventure,
+#popular:checked ~ .games .popular,
+#friends:checked ~ .games .friends,
+#singleplayer:checked ~ .games .singleplayer,
+#action:checked ~ .games .action {
+  display: block;
+}
+
+footer {
+  margin-top: 45px;
+  padding: 20px 0;
+  color: #777f89;
+  font-size: 12px;
+  text-align: center;
+}
+/* Кнопка сохранения игры. Работает только на этой странице. */
+.game-card {
+  position: relative;
+}

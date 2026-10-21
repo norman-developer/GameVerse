@@ -1,0 +1,84 @@
+@import url("https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-chubby/css/uicons-regular-chubby.css");
+
+/* Manrope — основной текст */
+@font-face {
+  font-family: "Manrope";
+  src: url("Manrope-VariableFont_wght.ttf");
+  font-weight: 200 800;
+}
+
+/* Unbounded — заголовки */
+@font-face {
+  font-family: "Unbounded";
+  src: url("Unbounded-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Unbounded";
+  src: url("Unbounded-Bold.ttf");
+  font-weight: 700;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  min-height: 100vh;
+  color: white;
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  background-color: #0d1110;
+}
+
+header {
+  width: 220px;
+  padding: 15px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: #c41e3a;
+
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  align-self: flex-start;
+}
+
+header #logo {
+  width: 90%;
+  margin-left: -9px;
+}
+
+header nav {
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-family: "Unbounded", sans-serif;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+header nav a:hover {
+  background: #ff6b61;
+}
+
+.social {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  border-top: 2px solid #e9687c;
+  padding-top: 30px;
+}

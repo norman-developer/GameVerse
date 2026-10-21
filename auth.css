@@ -1,0 +1,131 @@
+/* Страницы входа и регистрации */
+.auth-wrap {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0 50px;
+}
+.auth-card {
+  width: 100%;
+  max-width: 480px;
+  background: #20252b;
+  border: 1px solid #343a40;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 18px 60px #0004;
+}
+.auth-banner {
+  background: linear-gradient(120deg, #c41e3a, #5c2034);
+  text-align: center;
+  padding: 35px 22px;
+}
+.auth-avatar {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: #ffffff2b;
+  margin: 0 auto 12px;
+  display: grid;
+  place-items: center;
+  font-size: 28px;
+}
+.auth-banner h1 {
+  font:
+    700 23px Unbounded,
+    sans-serif;
+  margin: 0 0 8px;
+}
+.auth-banner p {
+  margin: 0;
+  color: #ffe1e8;
+  font-size: 13px;
+}
+.auth-body {
+  padding: 28px;
+}
+.auth-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.auth-tabs a {
+  padding: 12px;
+  text-align: center;
+  border-radius: 10px;
+  background: #353b44;
+  color: #b8bdc5;
+  text-decoration: none;
+}
+.auth-tabs a.selected {
+  background: #c41e3a;
+  color: white;
+}
+.auth-body h2 {
+  font-size: 21px;
+  margin: 0 0 6px;
+}
+.auth-note,
+.auth-warning {
+  color: #9da6b1;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 22px;
+}
+.auth-form label {
+  font-size: 13px;
+  color: #dce0e6;
+}
+.auth-form input {
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #3a424b;
+  background: #13171c;
+  color: #fff;
+  font: inherit;
+  min-width: 0;
+}
+.auth-form input:focus {
+  outline: 2px solid #c41e3a;
+  outline-offset: 1px;
+}
+.auth-form button {
+  margin-top: 12px;
+  padding: 15px;
+  border: 0;
+  border-radius: 10px;
+  background: #c41e3a;
+  color: #fff;
+  font:
+    700 14px Manrope,
+    sans-serif;
+  cursor: default;
+}
+.auth-switch {
+  text-align: center;
+}
+.auth-switch a {
+  color: #ff7b91;
+  text-decoration: none;
+}
+.auth-warning {
+  text-align: center;
+  margin-bottom: 0;
+}
+@media (max-width: 600px) {
+  .auth-wrap {
+    padding: 10px 0 30px;
+  }
+  .auth-body {
+    padding: 20px;
+  }
+  .auth-banner {
+    padding: 25px 15px;
+  }
+}

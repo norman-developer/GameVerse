@@ -1,0 +1,291 @@
+/* GameVerse 2.0 — согласованные доработки */
+.site-footer {
+  display: block !important;
+  margin-top: 55px !important;
+  padding: 23px 12px !important;
+  border-top: 1px solid #343a40 !important;
+  background: transparent !important;
+  text-align: center;
+}
+.site-footer .footer-bottom {
+  border: 0 !important;
+  padding: 0 !important;
+  font-size: 12px;
+  color: #b8bdc5;
+  letter-spacing: 0.15px;
+}
+.catalog-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 19px;
+  color: #ee5670;
+  font:
+    700 13px Manrope,
+    sans-serif;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.catalog-back:hover {
+  color: #fff;
+}
+.mobile-nav {
+  display: none;
+}
+body > header nav a[href="notifications.html"],
+body > header nav a[href="login.html"] {
+  display: none;
+}
+
+/* Сохранение игр — кнопка внутри обложки */
+.game-card {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Верхние действия на ПК — отдельные кнопки по центру */
+.top {
+  flex-wrap: wrap;
+}
+.header-actions {
+  display: flex;
+  justify-content: center !important;
+  gap: 12px;
+  margin-inline: auto;
+}
+.header-actions .icon-header {
+  border-radius: 12px;
+  transition:
+    transform 0.2s,
+    background 0.2s;
+}
+.header-actions .icon-header:hover {
+  transform: translateY(-2px);
+}
+
+/* Адаптация сообщества */
+@media (max-width: 850px) {
+  .community-hero {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .hero-content,
+  .hero-decoration {
+    min-width: 0;
+    max-width: 100%;
+  }
+  .features-grid,
+  .roadmap {
+    grid-template-columns: 1fr !important;
+  }
+  .feature-card,
+  .roadmap-item,
+  .developer-card,
+  .future-team {
+    min-width: 0;
+  }
+  .community-section,
+  .join-community {
+    max-width: 100%;
+  }
+}
+@media (max-width: 700px) {
+  body {
+    overflow-x: hidden;
+  }
+  body > header {
+    align-items: center !important;
+  }
+  body > header > a:has(#logo) {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+  body > header #logo {
+    display: block;
+    width: min(160px, 60vw) !important;
+    max-width: 100%;
+    height: auto;
+    margin: 0 !important;
+  }
+  body > header nav {
+    display: none !important;
+  }
+  main {
+    padding: 18px 16px 95px !important;
+  }
+  .mobile-nav {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: #191b23;
+    border-top: 1px solid #393a44;
+    padding: 9px 7px max(9px, env(safe-area-inset-bottom));
+    box-shadow: 0 -8px 28px #0005;
+  }
+  .mobile-nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 7px 2px;
+    color: #b9bac4;
+    text-decoration: none;
+    font:
+      600 10px Manrope,
+      sans-serif;
+    min-width: 0;
+    border-radius: 11px;
+  }
+  .mobile-nav a i {
+    font-size: 21px;
+  }
+  .mobile-nav a.active {
+    color: #ff6a84;
+    background: #c41e3a22;
+  }
+  .top {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .header-actions {
+    width: max-content !important;
+    max-width: 100%;
+    margin: 4px auto 0;
+    padding: 7px;
+    border: 1px solid #373945;
+    background: #23252e;
+    border-radius: 16px;
+    gap: 7px;
+  }
+  .header-actions .icon-header {
+    margin: 0;
+  }
+  .community-hero {
+    padding: 24px 18px !important;
+  }
+  .community-hero h1 {
+    font-size: clamp(23px, 7vw, 36px) !important;
+    overflow-wrap: anywhere;
+  }
+  .hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .hero-buttons a {
+    max-width: 100%;
+  }
+  .hero-decoration {
+    display: none !important;
+  }
+  .features-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px;
+  }
+  .feature-card {
+    width: 100%;
+    padding: 20px !important;
+  }
+  .section-heading {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .section-heading h2 {
+    font-size: clamp(18px, 5vw, 25px);
+  }
+  .developer-profile,
+  .developer-details,
+  .developer-top,
+  .future-team,
+  .roadmap-item {
+    flex-wrap: wrap;
+  }
+  .developer-card,
+  .future-team,
+  .join-community {
+    padding: 22px 16px !important;
+  }
+  .developer-skills,
+  .developer-socials {
+    flex-wrap: wrap;
+  }
+  .join-community h2 {
+    font-size: 21px !important;
+  }
+  .join-community a {
+    max-width: 100%;
+    text-align: center;
+  }
+  .page-top {
+    flex-wrap: wrap;
+  }
+  .profile-header,
+  .profile-banner,
+  .profile-user {
+    max-width: 100%;
+  }
+  .profile-user {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center;
+    gap: 12px !important;
+  }
+  .profile-info {
+    text-align: center;
+  }
+  .profile-user .primary-btn {
+    align-self: center;
+  }
+  .stats-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 8px;
+  }
+  .stat-card {
+    min-width: 0;
+    padding: 13px 7px !important;
+    overflow-wrap: anywhere;
+  }
+  .favorite-grid,
+  .achievements-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+  }
+  .favorite-card,
+  .achievement-card,
+  .level-card,
+  .settings-card {
+    min-width: 0;
+    max-width: 100%;
+  }
+  .level-top,
+  .xp-info {
+    flex-wrap: wrap;
+  }
+  .settings-card {
+    padding: 18px !important;
+  }
+  .settings-form input,
+  .settings-form select,
+  .settings-form textarea {
+    max-width: 100%;
+  }
+}
+@media (max-width: 380px) {
+  .mobile-nav a {
+    font-size: 9px;
+  }
+  .stats-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
